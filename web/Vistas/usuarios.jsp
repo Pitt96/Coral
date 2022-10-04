@@ -52,7 +52,7 @@
                         <td><%= user.getEdad()%></td>
                         <td><%= user.getCargo()%></td>
                         <td><%= user.getUsuario()%></td>
-                        <td><%= user.getPassword()%></td>
+                        <td><input type="password" value="<%= user.getPassword()%>"></td>
                         <td>
                             <a href="Controlador?accion=editar&id=<%= user.getCodigo()%>">Editar</a>
                             <a href="Controlador?accion=eliminar&id=<%= user.getCodigo()%>">Eliminar</a>

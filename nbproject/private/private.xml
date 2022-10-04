@@ -5,13 +5,9 @@
         <group>
             <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/index.jsp</file>
             <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/Vistas/usuarios.jsp</file>
-            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/src/java/Interfaces/CRUD.java</file>
-            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/src/java/Modelo/Persona.java</file>
             <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/src/java/ModeloDAO/UsuarioDAO.java</file>
-            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/src/java/Controlador/Controlador.java</file>
-            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/src/java/Modelo/Usuario.java</file>
-            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/Vistas/CRUD/Add/agregarUsuario.jsp</file>
-            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/Vistas/CRUD/Read/listarUsuarios.jsp</file>
+            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/Vistas/producto.jsp</file>
+            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/Vistas/CRUD/Update/modificarUsuario.jsp</file>
         </group>
     </open-files>
 </project-private>

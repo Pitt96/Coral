@@ -1,12 +1,13 @@
 
 package Interfaces;
 
-import Modelo.Usuario;
+
 import java.util.List;
 
 /**
  *
  * @author Pitt
+ * @param <G>
  */
 public interface CRUD<G> {
     public List listar();

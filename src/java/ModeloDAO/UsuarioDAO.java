@@ -24,11 +24,12 @@ public class UsuarioDAO implements CRUD<Usuario>{
     @Override
     public List listar() {
         ArrayList<Usuario>list=new ArrayList<>();
-        String sql  ="select * from usuario";
+//        String sql  ="select * from usuario";
         try {
             con = cn.getConnection();
-            ps=con.prepareStatement(sql);
-            rs=ps.executeQuery();
+            CallableStatement cs = con.prepareCall("{call readUsuarios}");
+//            ps=con.prepareStatement(sql);
+            rs=cs.executeQuery();
             while(rs.next()){
                 Usuario user=new Usuario();
                 user.setCodigo(rs.getString("codigo"));
@@ -72,28 +73,34 @@ public class UsuarioDAO implements CRUD<Usuario>{
 
     @Override
     public Usuario listar(String id) {
-        String sql  ="select * from usuario where codigo="+id;
+        Usuario usuario=new Usuario();
+//        String sql  ="select * from usuario where codigo='"+id+"'";
+        
         try {
             con = cn.getConnection();
-            ps=con.prepareStatement(sql);
-            rs=ps.executeQuery();
+//            ps=con.prepareStatement(sql);
+            CallableStatement cs = con.prepareCall("{call readUsuario(?)}");
+            cs.setString(1, id);
+            rs=cs.executeQuery();
             while(rs.next()){
                 
-                u.setCodigo(rs.getString("codigo"));
-                u.setDni(rs.getString("dni"));
-                u.setNombre(rs.getString("nombre"));
-                u.setApellido(rs.getString("apellido"));
-                u.setDireccion(rs.getString("direccion"));
-                u.setCelular(rs.getString("celular"));
-                u.setEmail(rs.getString("email"));
-                u.setEdad(rs.getInt("edad"));
-                u.setCargo(rs.getString("cargo"));
-                u.setUsuario(rs.getString("us"));
-                u.setPassword(rs.getString("contra"));
+                
+                usuario.setCodigo(rs.getString("codigo"));
+                usuario.setDni(rs.getString("dni"));
+                usuario.setNombre(rs.getString("nombre"));
+                usuario.setApellido(rs.getString("apellido"));
+                usuario.setDireccion(rs.getString("direccion"));
+                usuario.setCelular(rs.getString("celular"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setEdad(rs.getInt("edad"));
+                usuario.setCargo(rs.getString("cargo"));
+                usuario.setUsuario(rs.getString("us"));
+                usuario.setPassword(rs.getString("contra"));
             }
+            
         } catch (Exception e) {
         }
-        return u;
+        return usuario;
     }
 
     @Override
@@ -120,11 +127,14 @@ public class UsuarioDAO implements CRUD<Usuario>{
 
     @Override
     public boolean eliminar(String id) {
-        String sql="delete from usuario where codigo="+id;
+//        String sql="delete from usuario where codigo='"+id+"'";
         try {
             con = cn.getConnection();
-            ps=con.prepareStatement(sql);
-            ps.executeUpdate();
+            CallableStatement cs=con.prepareCall("{call eliminarUsuario(?)}");
+            cs.setString(1, id);
+//            ps=con.prepareStatement(sql);
+            cs.executeUpdate();
+//            ps.executeUpdate();
         } catch (Exception e) {
         }
         return false;

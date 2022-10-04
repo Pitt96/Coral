@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-09-2022 a las 02:19:24
+-- Tiempo de generación: 04-10-2022 a las 16:24:45
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -33,6 +33,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarUsuario` (IN `_cod` VARCHA
 SET
 dni=_dni,nombre=_nombre,apellido=_apellido,direccion=_direccion,celular=_cel,
 email=_correo,edad=_edad,cargo=_cargo,us=_user,contra=_contra WHERE codigo=_cod$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `readUsuario` (IN `_cod` VARCHAR(10))   SELECT * FROM usuario WHERE codigo=_cod$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `readUsuarios` ()   SELECT * FROM usuario$$
 
@@ -90,10 +92,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`codigo`, `dni`, `nombre`, `apellido`, `direccion`, `celular`, `email`, `edad`, `cargo`, `us`, `contra`) VALUES
-('U0001', '12345678', 'omar', 'ninaja', 'las malvinas', '123456789', 'omar@gmail.com', 25, 'cajero', 'omarNinaja', '123456789'),
-('U0002', '96325874', 'adwar', 'gonzales', 'sjl', '963258741', 'adwar@gmail.com', 23, 'administrador', 'adwaradmi', '123456p'),
-('U0003', '65432198', 'SEBAS', 'truco', 'comas', '951357632', 'sebas@gmail.com', 22, 'administrador', 'sebasAdmi', '123'),
-('U0004', '91648237', 'omar', 'Casas', 'ÑAÑA', '973164825', 'omar26@gmail.com', 26, 'cajero', 'omar26', '0000');
+('U0001', '12345678', 'omar', 'ninaja', 'las malvinas', '123456789', 'omar@gmail.com', 25, 'cajero', 'omarNinaja', '123456789');
 
 --
 -- Índices para tablas volcadas

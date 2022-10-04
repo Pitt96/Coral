@@ -38,6 +38,7 @@
                 Contraseña:<br>
                 <input type="password" name="txtContra"><br><br>
                 <input type="submit" name="accion" value="Agregar"><br>
+                <a href="Controlador?accion=listarUsuario">Cancelar</a>
             </form>
         </div>
         
