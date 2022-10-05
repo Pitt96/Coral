@@ -4,13 +4,58 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <title>JSP Page</title>
     </head>
-    <body>
-        <div>
-            <a href="Controlador?accion=listarUsuario">Usuarios</a>
-            <a href="Controlador?accion=listarProductos">Productos</a>
-            <a href="Controlador?accion=listarCategoriaProduct">Categoria Productos</a>
-        </div>
+    <style>
+        .navbar-main .active,.nav>a:hover{
+            text-decoration: underline wavy #632ce7;
+            text-underline-offset:9px;
+            font-weight: bold;
+        }
+    </style>
+    <body class="bg-light">
+        <!--Nav Bar-->
+        <nav class="navbar  navbar-expand-md navbar-light fixed-top bg-light navbar-main">
+            <div class="container">
+                 <!--Logo-->
+                <a href="#" class="navbar-brand d-flex justify-content-center align-items-center">
+                    <img  src="https://drive.google.com/uc?export=download&id=1iUow5ZygEqHMITfist1OW1-29wdKQGkA" alt="" width="100px" height="50px">
+                    <p class="m-0 fw-bold">Panel de administracion</p>   
+                </a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Barra de navegacion">
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+                <!--Items-->
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <div class="nav ms-auto text-dark flex-column flex-md-row">
+                        <a href="#" class="nav-link text-dark active">Inicio</a>
+                        <a href="Controlador?accion=listarUsuario" class="nav-link text-dark">Usuarios</a>
+                        <a href="Controlador?accion=listarProductos" class="nav-link text-dark">Productos</a>
+                        <a href="Controlador?accion=listarCategoriaProduct" class="nav-link text-dark">Categoria Productos</a>
+                        <a href="#" class="nav-link text-dark">Ventas</a>
+                        <a href="#" class="nav-link text-dark">Clientes</a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <img class="rounded-circle me-2 ms-2" src="https://drive.google.com/uc?export=download&id=1CILbuaRbzsrGzxGkxA1lRdmGBU55cueU" width="80px" height="80px">
+                    <div class="d-flex flex-column justify-content-center ">
+                        <p class="m-0 fw-bold fs-6">Hola, Daniel Laruzo</p>
+                        <div class="dropdown-center">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Administrador
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                            </ul>
+                         </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </nav>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     </body>
 </html>
