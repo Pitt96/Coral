@@ -28,7 +28,7 @@
                         <div>
                             <div class="mb-2">
                                 <label for="txtCodigo">Codigo:</label>
-                                <input type="text" name="txtCodigo" id="txtCodigo" value="<%= id %>" class="form-control">
+                                <input type="text" name="txtCodigo" id="txtCodigo" value="<%= id %>" class="form-control" disabled="">
                             </div>
                             <div class="mb-2">
                                 <label for="formFileSm" class="form-label">Sube tu foto de perfil:</label>
@@ -63,7 +63,7 @@
                             </div>
                             <div class="mb-2">
                                 <label for="txtCorreo">Correo:</label>
-                                <input type="email" name="txtCorreo" value="<%= usua.getCelular() %>" class="form-control">
+                                <input type="email" name="txtCorreo" value="<%= usua.getEmail() %>" class="form-control">
                             </div>
                             <div class="mb-2">
                                <label for="txtEdad">Edad:</label>
