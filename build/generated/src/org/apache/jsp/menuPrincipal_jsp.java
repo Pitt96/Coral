@@ -214,7 +214,7 @@ public final class menuPrincipal_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                                Invitado\n");
       out.write("                            </button>\n");
       out.write("                            <ul class=\"dropdown-menu\">\n");
-      out.write("                                <li><a class=\"dropdown-item\" href=\"#\">Iniciar Sesion</a></li>\n");
+      out.write("                                <li><a class=\"dropdown-item\" href=\"ControladorLogin?accion=inicio\">Iniciar Sesion</a></li>\n");
       out.write("                            </ul>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");

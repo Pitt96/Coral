@@ -16,7 +16,7 @@
     </head>
     <body>
         <section class="d-flex justify-content-center align-items-center mt-5">
-            <div class="card  p-3 col-sm-5 p-3" >
+            <div class="card  p-3 col-sm-4 p-3" >
                 <div class="mb-3">
                     <h1 class="text-center">Modificar Categoria Producto</h1>
                  </div>
@@ -28,7 +28,7 @@
                             catP=(CategoriaProducto)udao.listar(id);
 
                         %>
-                    <form action="ControladorCategoria" class="d-flex d-flex justify-content-around" >
+                    <form action="ControladorCategoria" class="d-flex d-flex flex-column justify-content-around" >
                         
                        
                             <div class="mb-2">
@@ -53,7 +53,7 @@
                             </div>
 
                             
-                            <div class="mb-2">
+                            <div class="mb-2 d-flex justify-content-around">
                                 <a class="btn btn-outline-secondary pe-5 ps-5" href="ControladorDirecciones?accion=listarCategoriaProduct" role="button">Cancelar</a>
                                 <input class="btn btn-primary pe-5 ps-5" role="button" aria-disabled="true" type="submit" name="accion" value="Modificar">
                             </div>
