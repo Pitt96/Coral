@@ -89,6 +89,11 @@ public class ControladorCategoria extends HttpServlet {
             catP.setDescripcion(txtDescripcion);
             dao.add(catP);
             acceso=listarCategoria;
+        }else if(accion.equals("eliminarCat")){
+            String txtCodigo = request.getParameter("id");
+            catP.setCodigo(txtCodigo);
+            dao.eliminar(txtCodigo);
+            acceso=listarCategoria;
         }
 //        switch(accion){
 //            case "AgregarCat":
