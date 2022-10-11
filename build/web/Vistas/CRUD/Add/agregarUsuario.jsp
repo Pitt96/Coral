@@ -26,16 +26,16 @@
             
             <div class="mb-2">
             
-                <form action="Controlador" class="d-flex d-flex justify-content-around">
+                <form action="Controlador" class="d-flex d-flex justify-content-around" >
                     <div class="container_inputs">
                         <div class="mb-2">
                             <label for="txtCodigo">Codigo:</label>
                             <input type="text" name="txtCodigo" class="form-control" placeholder="Ejem: U0006">
                         </div>
-                        <div class="mb-2">
+                       <!-- <div class="mb-2">
                                 <label for="formFileSm" class="form-label">Sube tu foto de perfil:</label>
-                                <input class="form-control form-control-sm" id="formFileSm" type="file">
-                             </div>
+                                <input class="form-control form-control-sm" name="fileFoto" id="formFileSm" type="file">
+                             </div>-->
                         <div class="mb-2">
                             <label for="txtDni">DNI:</label >
                             <input type="text" name="txtDni" class="form-control" placeholder="Ejem: 12345678">

@@ -51,10 +51,10 @@
                 <!--Items-->
                 <div class="collapse navbar-collapse" id="mainNav">
                     <div class="nav ms-auto text-dark flex-column flex-lg-row">
-                        <a href="#" class="nav-link text-dark ">Inicio</a>
+                        <a href="ControladorDirecciones?accion=dashboard" class="nav-link text-dark ">Inicio</a>
                         <a href="Controlador?accion=listarUsuario" class="nav-link text-dark active">Usuarios</a>
-                        <a href="Controlador?accion=listarProductos" class="nav-link text-dark">Productos</a>
-                        <a href="Controlador?accion=listarCategoriaProduct" class="nav-link text-dark">Categoria Productos</a>
+                        <a href="ControladorDirecciones?accion=listarProductos" class="nav-link text-dark">Productos</a>
+                        <a href="ControladorDirecciones?accion=listarCategoriaProduct" class="nav-link text-dark">Categoria Productos</a>
                         <a href="#" class="nav-link text-dark">Ventas</a>
                         <a href="#" class="nav-link text-dark">Clientes</a>
                     </div>
@@ -102,6 +102,8 @@
                         <th class="tamaño_titulo_table">ACCIONES</th>
                     </tr>
                 </thead>
+                
+                <tbody >
                 <%
                     UsuarioDAO dao = new UsuarioDAO();
                     List<Usuario> list = dao.listar();
@@ -110,9 +112,9 @@
                     while (iter.hasNext()) {
                         user = iter.next();
                 %>
-                <tbody >
                     <tr>
                         <td class="tamaño"><%= user.getCodigo()%></td>
+                        <!--<td class="tamaño"><img src="ControladorIMG?codigo=<%= user.getCodigo()%>" width="80px" height="80px"></td>-->
                         <td class="tamaño"><%= user.getDni()%></td>
                         <td class="tamaño"><%= user.getNombre()%></td>
                         <td class="tamaño"><%= user.getApellido()%></td>
@@ -120,7 +122,21 @@
                         <td class="tamaño"><%= user.getCelular()%></td>
                         <td class="tamaño"><%= user.getEmail()%></td>
                         <td class="tamaño"><%= user.getEdad()%></td>
-                        <td class="tamaño"><%= user.getCargo()%></td> 
+                        <%
+                                    String cargo=user.getCargo();
+                                    String cargo_Muestra="";
+                                    if(cargo.equals("1")){
+                                        cargo_Muestra="Super Administrador";
+                                    }else if(cargo.equals("2")){
+                                        cargo_Muestra="Administrador";
+                                    }else if(cargo.equals("3")){
+                                        cargo_Muestra="Cajero";
+                                    }else{
+                                        cargo_Muestra="Cargo no seleccionado";
+                                    }
+
+                                   %>
+                        <td class="tamaño"><%= cargo_Muestra%></td> 
                         <td class="tamaño"><%= user.getUsuario()%></td>
                         <td><input  class="tamaño" type="password" value="<%= user.getPassword()%>"></td>
                         <td class="d-flex flex-column justify-content-center align-items-center">

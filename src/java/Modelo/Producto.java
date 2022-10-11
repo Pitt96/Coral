@@ -1,12 +1,15 @@
 
 package Modelo;
 
+import java.io.InputStream;
+
 /**
  *
  * @author Pitt
  */
 public class Producto {
     private String codigo;
+    private String ruta;
     private String nombre;
     private double precio;
     private int stock;
@@ -15,21 +18,16 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(String codigo, String nombre, double precio, int stock, CategoriaProducto cat) {
+    public Producto(String codigo, String ruta, String nombre, double precio, int stock, CategoriaProducto cat) {
         this.codigo = codigo;
+        this.ruta = ruta;
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
         this.cat = cat;
     }
 
-    public CategoriaProducto getCat() {
-        return cat;
-    }
-
-    public void setCat(CategoriaProducto cat) {
-        this.cat = cat;
-    }
+    
 
     public String getCodigo() {
         return codigo;
@@ -62,5 +60,23 @@ public class Producto {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
+    public CategoriaProducto getCat() {
+        return cat;
+    }
+
+    public void setCat(CategoriaProducto cat) {
+        this.cat = cat;
+    }
+
+    public String getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
+    }
+
+    
     
 }

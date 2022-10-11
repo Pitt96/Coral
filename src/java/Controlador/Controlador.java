@@ -8,17 +8,22 @@ package Controlador;
 import Modelo.Usuario;
 import ModeloDAO.UsuarioDAO;
 import java.io.IOException;
+
 import java.io.PrintWriter;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 /**
  *
  * @author Pitt
  */
+@MultipartConfig
 public class Controlador extends HttpServlet {
 
     /**
@@ -75,6 +80,8 @@ public class Controlador extends HttpServlet {
             acceso=addUsuario;
         }else if(accion.equalsIgnoreCase("Agregar")){
             String codigo=request.getParameter("txtCodigo");
+//            Part part=request.getPart("fileFoto");
+//            InputStream inputStream =part.getInputStream();
             String dni=request.getParameter("txtDni");
             String nombre=request.getParameter("txtNombre");
             String apellido=request.getParameter("txtApellido");
@@ -86,6 +93,7 @@ public class Controlador extends HttpServlet {
             String usuario=request.getParameter("txtUsuario");
             String pass=request.getParameter("txtContra");
             u.setCodigo(codigo);
+//            u.setFoto(inputStream);
             u.setDni(dni);
             u.setNombre(nombre);
             u.setApellido(apellido);

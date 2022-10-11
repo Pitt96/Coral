@@ -1,6 +1,8 @@
 
 package Modelo;
 
+import java.io.InputStream;
+
 /**
  *
  * @author Pitt
@@ -11,6 +13,7 @@ public class Usuario extends Persona{
     private String cargo;
     private String usuario;
     private String password;
+//    private InputStream foto;
     public Usuario() {
     }
 
@@ -18,12 +21,13 @@ public class Usuario extends Persona{
     public Usuario(String codigo, String dni, String nombre, String apellido, String direccion, String celular, String email, int edad, String cargo, String usuario, String password) {
         super(nombre, apellido, direccion, celular, email, edad);
         this.codigo = codigo;
+        
         this.dni = dni;
         this.cargo = cargo;
         this.usuario = usuario;
         this.password = password;
     }
-
+    
     public String getCodigo() {
         return codigo;
     }
@@ -63,6 +67,7 @@ public class Usuario extends Persona{
     public void setPassword(String password) {
         this.password = password;
     }
+
     
     
 

@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/menuPrincipal.jsp</file>
+            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/src/java/Controlador/ControladorCategoria.java</file>
+            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/Vistas/CRUD/Add/agregarCategoria.jsp</file>
+            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/src/java/Controlador/Controlador.java</file>
+            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/Vistas/CRUD/Update/modificarCategoria.jsp</file>
+            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/src/java/ModeloDAO/CategoriaDAO.java</file>
+            <file>file:/D:/Roy/ing.de%20sistemas/2022_Ciclo2_Agosto/Integrador_software/ProyectoWeb/Sistema_venta_OpticaCoral/web/Vistas/CRUD/Add/agregarUsuario.jsp</file>
         </group>
     </open-files>
 </project-private>

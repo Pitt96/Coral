@@ -17,23 +17,24 @@
                     <h1 class="text-center">Modificar Usuario</h1>
                  </div>
                 <div class="mb-2">
-                    <form action="Controlador" class="d-flex d-flex justify-content-around">
-                        <%
+                    <%
                             UsuarioDAO udao=new UsuarioDAO();
                             String id = request.getAttribute("iduser").toString();
                             Usuario usua=new Usuario();
                             usua=(Usuario)udao.listar(id);
 
                         %>
+                    <form action="Controlador" class="d-flex d-flex justify-content-around" >
+                        
                         <div>
                             <div class="mb-2">
                                 <label for="txtCodigo">Codigo:</label>
-                                <input type="text" name="txtCodigo" id="txtCodigo" value="<%= id %>" class="form-control" disabled="">
+                                <input type="text" name="txtCodigo"  value="<%= usua.getCodigo() %>" class="form-control" >
                             </div>
-                            <div class="mb-2">
+                           <!--<div class="mb-2">
                                 <label for="formFileSm" class="form-label">Sube tu foto de perfil:</label>
-                                <input class="form-control form-control-sm" id="formFileSm" type="file">
-                             </div>
+                                <input class="form-control form-control-sm" id="formFileSm" name="fileFoto" type="file">
+                             </div>-->
                             <div class="mb-2"> 
                                 <label for="txtDni">DNI:</label>
                                 <input type="text" name="txtDni" value="<%= usua.getDni()%>" class="form-control">
@@ -69,9 +70,21 @@
                                <label for="txtEdad">Edad:</label>
                                 <input type="number" name="txtEdad" value="<%= usua.getEdad() %>" class="form-control">
                             </div>
-                            <div class="mb-2">
+                            <!--<div class="mb-2">
+                                <% %>
                                 <label for="txtCargo">Cargo:</label>
-                                <input type="text" name="txtCargo" value="<%= usua.getCargo() %>" class="form-control">
+                                <input type="text" name="txtCargo" value="<%= "" %>" class="form-control">
+                            </div>-->
+                            <div class="mb-2">
+                                <label for="txtCargo">Cargo:</label >
+                                <select class="form-select" name="txtCargo" id="rol">
+                                        <option <%= udao.obtenerCargo0(usua.getCargo()) %> value="0">Seleccione el cargo</option>
+                                        <option <%= udao.obtenerCargo1(usua.getCargo()) %> value="1">Super Administrador</option>
+                                        <option <%= udao.obtenerCargo2(usua.getCargo()) %> value="2">Administrador</option>
+                                        <option <%= udao.obtenerCargo3(usua.getCargo()) %> value="3">Cajero</option>
+                                 </select>
+                                <!--<label for="txtCargo">Cargo:</label >
+                                <input type="text" name="txtCargo" class="form-control">-->
                             </div>
                             <div class="mb-2">
                                 <label for="txtUsuario">Usuario:</label>
@@ -82,7 +95,7 @@
                                 <input type="password" name="txtContra" value="<%= usua.getPassword() %>" class="form-control">
                             </div>
                             <div class="mb-2 d-flex justify-content-end">
-                                <a class="btn btn-primary pe-5 ps-5" name="accion" role="button" aria-disabled="true" value="Actualizar">Modificar</a>
+                                <input class="btn btn-primary pe-5 ps-5" role="button" aria-disabled="true" type="submit" name="accion" value="Actualizar">
                             </div>
                         </div>
                     </form>
