@@ -20,6 +20,14 @@
         <servlet-name>ControladorLogin</servlet-name>
         <servlet-class>Controlador.ControladorLogin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorOftalmologo</servlet-name>
+        <servlet-class>Controlador.ControladorOftalmologo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorUsuario</servlet-name>
+        <servlet-class>Controlador.ControladorCliente</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>ControladorLogin</servlet-name>
         <url-pattern>/ControladorLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorOftalmologo</servlet-name>
+        <url-pattern>/ControladorOftalmologo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorUsuario</servlet-name>
+        <url-pattern>/ControladorUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -4,17 +4,14 @@ package ModeloDAO;
 import Config.Conexion;
 import Interfaces.CRUD;
 import Modelo.Usuario;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.http.HttpServletResponse;
+
 
 /**
  *
@@ -56,32 +53,7 @@ public class UsuarioDAO implements CRUD<Usuario>{
         return list;
     }
     
-    public void listarImg(String id,HttpServletResponse response){
-        String sql="select * from usuario where codigo='"+id+"'";
-        InputStream inputStream=null;
-        OutputStream outputStream = null;
-        BufferedInputStream bufferedInputStream=null;
-        BufferedOutputStream bufferedOutputStream=null;
-        response.setContentType("image/*");
-        try {
-            outputStream=response.getOutputStream();
-            con = cn.getConnection();
-            ps=con.prepareStatement(sql);
-            rs=ps.executeQuery();
-            
-            if(rs.next()){
-                inputStream=rs.getBinaryStream("foto");
-            }
-            bufferedInputStream=new BufferedInputStream(inputStream);
-            bufferedOutputStream=new BufferedOutputStream(outputStream);
-            int i=0;
-            while((i=bufferedInputStream.read())!=-1){
-                bufferedOutputStream.write(i);
-            }
-            
-        } catch (Exception e) {
-        }
-    }
+
     @Override
     public boolean add(Usuario obj) {
         try {

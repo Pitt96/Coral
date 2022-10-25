@@ -23,7 +23,7 @@
                             Usuario usua=new Usuario();
                             usua=(Usuario)udao.listar(id);
 
-                        %>
+                    %>
                     <form action="Controlador" class="d-flex d-flex justify-content-around" >
                         
                         <div>

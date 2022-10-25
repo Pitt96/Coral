@@ -55,7 +55,8 @@
                         <a href="ControladorDirecciones?accion=listarProductos" class="nav-link text-dark">Productos</a>
                         <a href="ControladorDirecciones?accion=listarCategoriaProduct" class="nav-link text-dark active">Categoria Productos</a>
                         <a href="#" class="nav-link text-dark">Ventas</a>
-                        <a href="#" class="nav-link text-dark">Clientes</a>
+                        <a href="./Vistas/clientes.jsp" class="nav-link text-dark">Clientes</a>
+                        <a href="ControladorOftalmologo?accion=listarOftalmologo" class="nav-link text-dark">Oftalmologo</a>
                     </div>
                 </div>
                 <div class="d-flex">

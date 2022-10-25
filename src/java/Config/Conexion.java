@@ -13,16 +13,22 @@ import java.sql.DriverManager;
  * @author Pitt
  */
 public class Conexion {
+
     Connection con;
-    public Conexion(){
+
+    public Conexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/opticacoralbd","root","");            
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/opticacoralbd", "root", "");
         } catch (Exception e) {
-            System.err.println("Error"+e);
+            System.err.println("Error" + e);
         }
     }
-    public Connection getConnection(){
+
+    public Connection getConnection() {
         return con;
+    }
+
+    public void desconectar() {
     }
 }
